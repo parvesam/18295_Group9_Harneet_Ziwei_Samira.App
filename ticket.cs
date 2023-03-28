@@ -12,28 +12,31 @@ public class Ticket
 	{
 		public string MovieName { get; set; }
 	public string Location { get; set; }
-	public int NumberOfTickets { get; set; }
-	public Ticket()
+	public int NumberOfAdultTickets { get; set; }
+    public int NumberOfKidTickets
+    {
+        get; set;
+    }
+
+
+    public Ticket(string MovieName, string Location, int AdultTickets, int KidTickets )
 	{
 		MovieName= MovieName;
 		Location= Location;
-		NumberOfTickets= NumberOfTickets;
-	}
-    public double CalculatePrice(TicketType ticketType)
+        NumberOfAdultTickets= AdultTickets;
+        NumberOfKidTickets= KidTickets;
+
+
+    }
+    public double CalculatePrice()
     {
-        double ticketPrice = 0;
+        
+        double price;
+       
 
-        switch (ticketType)
-        {
-            case TicketType.Adult:
-                ticketPrice = 15.99;
-                break;
-            case TicketType.Kid:
-                ticketPrice = 9.99;
-                break;
-        }
-
-        return ticketPrice * NumberOfTickets;
+        
+        price= (15 * NumberOfAdultTickets)+ (10 * NumberOfKidTickets);
+        return price;
     }
 }
 
