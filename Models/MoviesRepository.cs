@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _18295_Group9_Harneet_Ziwei_Samira
+namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 {
-    public class MoviesRepository
+    public static class MoviesRepository
     {
-        private readonly List<Movie> movies;
+        private static readonly List<Movie> movies;
 
-        public MoviesRepository()
+        static MoviesRepository()
         {
             movies = new List<Movie>
         {
@@ -36,9 +36,9 @@ namespace _18295_Group9_Harneet_Ziwei_Samira
             new Movie { Name = "Movie 20", Genre = "Romance", Duration = 125, Language = "Italian" },
         };
 
-           
+
         }
-        public IEnumerable<Movie> GetAllMovies()
+        public static IEnumerable<Movie> GetAllMovies()
         {
             return movies;
         }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _18295_Group9_Harneet_Ziwei_Samira
+namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 {
-   public  class Movie
+    public class Movie
     {
         public string Name { get; set; }
         public string Genre { get; set; }
