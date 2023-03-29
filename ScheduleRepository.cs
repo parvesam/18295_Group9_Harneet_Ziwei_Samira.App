@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira
 {
-    internal class CinemaRepository
+    internal class ScheduleRepository
     {
     }
 }

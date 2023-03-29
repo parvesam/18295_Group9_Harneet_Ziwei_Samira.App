@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira
 {
-    public class Cinema
+    internal class Schedule
     {
-        public string Name { get; set; }
-        public string Location { get; set; }
-        
+        public Movie Movie { get; set; }
+        public Hall Hall { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }

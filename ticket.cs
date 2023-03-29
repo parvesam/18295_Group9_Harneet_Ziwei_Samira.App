@@ -3,8 +3,7 @@
 public class Ticket
 {
     
-    public Ticket()
-	{
+    
 		public string MovieName { get; set; }
 	public string Location { get; set; }
 	public int NumberOfAdultTickets { get; set; }
@@ -35,4 +34,4 @@ public class Ticket
     }
 }
 
-}
+

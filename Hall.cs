@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira
 {
-    public class Hall
+    public class Hall:Cinema
     {
-        public string NumberOfSeats { get; set; }
-        public string Name { get; set; }
+        public int NumberOfSeats { get; set; }
+        public string HallName { get; set; }
     }
 }
