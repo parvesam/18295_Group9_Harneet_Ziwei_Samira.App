@@ -2,12 +2,7 @@
 
 public class Ticket
 {
-    public enum TicketType
-    {
-        Adult = 1,
-        Kid = 2
-        
-    }
+    
     public Ticket()
 	{
 		public string MovieName { get; set; }
@@ -19,10 +14,10 @@ public class Ticket
     }
 
 
-    public Ticket(string MovieName, string Location, int AdultTickets, int KidTickets )
+    public Ticket(string movieName, string location, int AdultTickets, int KidTickets )
 	{
-		MovieName= MovieName;
-		Location= Location;
+		MovieName= movieName;
+		Location= location;
         NumberOfAdultTickets= AdultTickets;
         NumberOfKidTickets= KidTickets;
 
