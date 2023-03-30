@@ -12,7 +12,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira
         public string Genre { get; set; }
         public string Location { get; set; }
         public int AvailableSeats { get; set; }
-        public int TotalSeats { get; set; }
+        //public int TotalSeats { get; set; }
         public DateTime ShowTime { get; set; }
         public List<string> BookedSeats { get; set; }
 
@@ -23,7 +23,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira
             Location = location;
             AvailableSeats = availableSeats;
             ShowTime = showTime;
-            TotalSeats = totalSeats;
+           // TotalSeats = totalSeats;
             BookedSeats = new List<string>();
         }
     }
