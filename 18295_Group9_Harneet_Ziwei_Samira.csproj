@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\chair.png" />
 	  <None Remove="Resources\Images\cinema.png" />
 	</ItemGroup>
 

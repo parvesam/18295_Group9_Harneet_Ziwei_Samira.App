@@ -1,4 +1,5 @@
 using _18295_Group9_Harneet_Ziwei_Samira.Models;
+using _18295_Group9_Harneet_Ziwei_Samira.Pages;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira;
 
@@ -11,8 +12,8 @@ public partial class BookTicket : ContentPage
     }
     void LocationListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        //var selectedMovie = MoviesListView.SelectedItem as Movie;
-        //Navigation.PushAsync(new BookTicket(selectedMovie));
+        var selectedHall = LocationListView.SelectedItem as Hall;
+        Navigation.PushAsync(new SeatReservation(selectedHall));
     }
 
 }
