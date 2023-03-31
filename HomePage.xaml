@@ -4,15 +4,25 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.HomePage"
              Title="HomePage"
              BackgroundColor="#5885F5">
+    
     <VerticalStackLayout>
         <Label 
             Text="Welcome to Cinemagic!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            />
 
         <Image Source="cinema.png"
-               WidthRequest="300"
+               WidthRequest="250"
                />
-        
+
+        <Button 
+            Clicked="Button_Clicked"
+            BackgroundColor="#AD31D6"
+            TextColor="#edf5e1"
+            Text="Book Your Tickets!"
+            FontSize="30"
+            />
+
     </VerticalStackLayout>
 </ContentPage>
