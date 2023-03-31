@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 {
     internal class ScheduleRepository
     {
-        private readonly List<Schedule> schedules;
-        public ScheduleRepository()
+        private static readonly List<Schedule> schedules;
+        static ScheduleRepository()
         {
             // Create a list of Schedule instances
             schedules = new List<Schedule>();
@@ -44,6 +45,18 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
         {
             return schedules;
         }
+        public static List<Schedule> SearchByName(string title)
+        {
+            var result = new List<Schedule>();
 
+            foreach (var schedule in schedules)
+            {
+                if (schedule.Movie.Name==title)
+                {
+                    result.Add(schedule);
+                }
+            }
+            return result;
+        }
     }
 }
