@@ -9,4 +9,8 @@ public partial class MoviePage : ContentPage
         InitializeComponent();
         _movie = movie;
     }
+   public Movie Movie() 
+    {
+        return _movie;
+    }
 }

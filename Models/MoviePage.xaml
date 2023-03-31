@@ -4,9 +4,8 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MoviePage"
              Title="MoviePage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid>
+            
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
