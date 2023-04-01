@@ -35,7 +35,7 @@
                                        WidthRequest="150"
                                        
                                        />
-                                <Label Text="{Binding Title}"
+                                <Label Text="{Binding Name}"
                                        VerticalOptions="Center"
                                        FontSize="20"
 
