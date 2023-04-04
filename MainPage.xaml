@@ -35,7 +35,11 @@
                                        WidthRequest="150"
                                        
                                        />
+<<<<<<< HEAD
                                 <Label Text="{Binding Title}"
+=======
+                                <Label Text="{Binding Name}"
+>>>>>>> 4fd0432d9a74c8a45953cb819b8e74c189f1521d
                                        VerticalOptions="Center"
                                        FontSize="20"
 

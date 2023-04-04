@@ -1,4 +1,6 @@
-﻿namespace _18295_Group9_Harneet_Ziwei_Samira;
+﻿using _18295_Group9_Harneet_Ziwei_Samira.Models;
+
+namespace _18295_Group9_Harneet_Ziwei_Samira;
 
 public partial class App : Application
 {
@@ -6,6 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-        MainPage = new NavigationPage(new HomePage());
+        MainPage = new NavigationPage(new MainPage());
+
     }
 }
