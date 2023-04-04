@@ -14,8 +14,8 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
+		//count++;
 
-    
+	}
 }
 
