@@ -3,10 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.BookTicket"
              Title="BookTicket">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout
+               >
+
+            <Label  Text="Choose a Location"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+           
+            <ListView x:Name="LocationListView"
+                      RowHeight="150"
+                      ItemSelected="LocationListView_ItemSelected"
+
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell>
+                            <HorizontalStackLayout
+                                VerticalOptions="Center"
+                                >
+                                <Image Source="{Binding Movie.ImageUrl}"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       
+                                       />
+                                <Label Text="{Binding Movie.Name}"
+                                       VerticalOptions="Center"
+                                       FontSize="20"
+
+                                       />
+                                <Label Text="{Binding Hall.HallName}"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       
+                                       />
+                                <Label Text="{Binding Hall.Name}"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       
+                                       />
+                                <Label Text="{Binding Hall.Location}"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       
+                                       />
+                                <Label Text="{Binding DateTime}"
+                                       VerticalOptions="Center"
+                                       FontSize="20"
+
+                                       />
+                            </HorizontalStackLayout>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

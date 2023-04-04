@@ -10,5 +10,22 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
     {
         public int NumberOfSeats { get; set; }
         public string HallName { get; set; }
+
+        public static List<int> HallMap(Hall hall)
+        {
+            var totalseats = hall.NumberOfSeats;
+            var seats = new List<int>();
+            while (totalseats > 10)
+            {
+                seats.Add(10);
+                totalseats = totalseats - 10;
+            }
+            if (totalseats <= 10)
+                seats.Add(totalseats);
+            return seats;
+
+
+
+        }
     }
 }
