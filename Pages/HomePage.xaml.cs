@@ -9,6 +9,6 @@ public partial class HomePage : ContentPage
 	}
     void Button_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new MoviePage());
+        Navigation.PushAsync(new MainPage());
     }
 }
