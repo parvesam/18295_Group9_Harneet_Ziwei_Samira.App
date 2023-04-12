@@ -10,8 +10,12 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
     public static class HallRepository
     {
         private static List<Hall> halls;
-
         static HallRepository()
+        {
+            PopulateHallRepository();
+        }
+
+        private static void  PopulateHallRepository()
         {
             // Create 8 instances of Hall
             var hall1 = new Hall { Name = "Cinema 1", Location = "Location 1", NumberOfSeats = 30, HallName = "Hall A" };
@@ -35,7 +39,18 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
         {
             return halls;
         }
-        
+        public static int GetNumberofSeatsbyName(Hall selectedHall)
+        {
+            var result = new List<int>();
+
+            foreach (var hall in halls)
+            {
+                if (hall.HallName.ToLower().Contains(selectedHall.HallName.ToLower()))
+                   result.Add(hall.NumberOfSeats);  
+            }
+            return result[0];
+        }
+
     }
 
 }

@@ -9,102 +9,109 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
     internal class SeatRepository
     {
         public static List<Seat> seats;
-        public SeatRepository()
+
+        public SeatRepository(Hall hall)
         {
-            PopulateSeats();
+            PopulateSeats(hall);
         }
-        public void PopulateSeats()
+        public static void PopulateSeats(Hall hall)
         {
 
             seats = new List<Seat>();
 
             for (char row = 'A'; row <= 'E'; row++)
             {
-                for (int seatNumber = 1; seatNumber <= 10; seatNumber++)
+                for (int seatNumber = 1; seatNumber <= 8; seatNumber++)
                 {
-                    if (seats.Count <= 30)
+                    switch (hall.HallName)
                     {
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall A",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall E",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall G",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall H",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
+                        case "Hall A":
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall A",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
+                        case "Hall E":
+                            seats.Add( new Seat
+                            {
+                                HallName = "Hall E",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
+                        case "Hall G":
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall G",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
+                        case "Hall H":
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall H",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
+
+
+                        case "Hall B":
+
+
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall B",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
+                        case "Hall F":
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall F",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
 
 
 
-
-                    }
-                    if (seats.Count <= 25)
-                    {
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall B",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall F",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-
-
-
-                    }
-                    if (seats.Count <= 40)
-                    {
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall C",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-                        seats.Add(new Seat
-                        {
-                            HallName = "Hall D",
-                            RowName = row.ToString(),
-                            SeatNumberinRow = seatNumber
-                        });
-
+                        case "Hall C":
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall C",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
+                        case "Hall D":
+                            seats.Add(new Seat
+                            {
+                                HallName = "Hall D",
+                                RowName = row.ToString(),
+                                SeatNumberinRow = seatNumber
+                            });
+                            break;
                     }
                 }
             }
         }
         public static List<Seat> GetSeatsInHall(Hall hall)
 
+
         {
-            var SeatsinHall = new List<Seat>();
-            foreach (Seat seatname in seats)
+            var result = new List<Seat>();
+
+            foreach (var seat in seats)
             {
-
-
-                if (seats.Contains(hall))
-                {
-                    SeatsinHall.Add(seatname);
-
-                }
+                if (seat.HallName.ToLower().Contains(hall.HallName.ToLower()))
+                    result.Add(seat);
             }
-            return SeatsinHall;
+            return result;
         }
     }
 }

@@ -6,11 +6,14 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Pages;
 public partial class SeatReservation : ContentPage
 {
     private SeatRepository seatRepository;
+   
 	public SeatReservation(Hall hall)
 	{
         InitializeComponent();
-       
-        seatRepository = new SeatRepository();
+
+
+        seatRepository = new SeatRepository(hall);
+        SeatRepository.PopulateSeats(hall);
         SeatsListView.ItemsSource = SeatRepository.GetSeatsInHall(hall);
 
 
