@@ -84,5 +84,13 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 
 
         }
+        public int ReturnNumberofSeats()
+        {
+            return NumberOfSeats;
+        }
+        public string ReturnHallName()
+        {
+            return HallName;
+        }
     }
 }

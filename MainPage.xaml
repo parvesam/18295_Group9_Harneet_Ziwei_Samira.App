@@ -15,7 +15,7 @@
             <Entry
                     x:Name="SearchEntry"
                     Placeholder="Search"
-                    TextChanged="SearchEntry_TextChanged"
+                    TextChanged="SearchEntry_TextChanged"   
 
                     />
             <ListView x:Name="MoviesListView"

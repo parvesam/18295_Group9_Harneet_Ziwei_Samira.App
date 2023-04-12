@@ -12,10 +12,16 @@ public partial class MainPage : ContentPage
 
     }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		//count++;
+    private void SearchEntry_TextChanged(object sender, TextChangedEventArgs e)
+    {
 
-	}
+    }
+
+    private void MoviesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+
+        var selectedMovie = MoviesListView.SelectedItem as Movie;
+        Navigation.PushAsync(new BookTicket(selectedMovie));
+    }
 }
 

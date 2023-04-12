@@ -9,7 +9,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 
     public static class HallRepository
     {
-        private static readonly IEnumerable<Hall> halls;
+        private static List<Hall> halls;
 
         static HallRepository()
         {
@@ -31,7 +31,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 
 
 
-        public static IEnumerable<Hall> GetAllHalls()
+        public static List<Hall> GetAllHalls()
         {
             return halls;
         }

@@ -9,6 +9,7 @@ public partial class BookTicket : ContentPage
 	{
 		InitializeComponent();
         LocationListView.ItemsSource = ScheduleRepository.SearchByName(movie.Name);
+        
     }
     void LocationListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
