@@ -64,6 +64,7 @@
         <ImageButton Grid.Row="3" Grid.Column="2" Clicked="ImageButton_Clicked" />
         <ImageButton Grid.Row="3" Grid.Column="3" Clicked="ImageButton_Clicked" />
 
+        <Button x:Name="NextBtn" Text="Next" Clicked="Button_Clicked"></Button>
     </Grid>
 
 
