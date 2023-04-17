@@ -30,15 +30,17 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall A",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
-                            });
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
+                            }); ;
                             break;
                         case "Hall E":
                             seats.Add( new Seat
                             {
                                 HallName = "Hall E",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
                         case "Hall G":
@@ -46,7 +48,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall G",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
                         case "Hall H":
@@ -54,7 +57,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall H",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
 
@@ -66,7 +70,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall B",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
                         case "Hall F":
@@ -74,7 +79,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall F",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
 
@@ -85,7 +91,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall C",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
                         case "Hall D":
@@ -93,7 +100,8 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                             {
                                 HallName = "Hall D",
                                 RowName = row.ToString(),
-                                SeatNumberinRow = seatNumber
+                                SeatNumberinRow = seatNumber,
+                                SeatPhoto = "chair.png"
                             });
                             break;
                     }

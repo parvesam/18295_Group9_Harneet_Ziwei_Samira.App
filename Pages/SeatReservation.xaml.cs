@@ -31,4 +31,19 @@ public partial class SeatReservation : ContentPage
     {
 
     }
+
+    private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
+    {
+
+    }
+
+    private void Adult_Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
+    {
+
+    }
+
+    private void Kid_Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
+    {
+
+    }
 }

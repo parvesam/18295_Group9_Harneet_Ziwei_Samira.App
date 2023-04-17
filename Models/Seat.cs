@@ -10,5 +10,6 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
     {
         public string RowName { get; set; }
         public int SeatNumberinRow { get; set; }
+        public string SeatPhoto { get; set; }
     }
 }
