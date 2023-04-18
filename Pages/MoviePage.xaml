@@ -3,56 +3,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MoviePage"
              Title="MoviePage">
-    <VerticalStackLayout VerticalOptions="Start" Spacing="20">
-        <Label
+
+    <Grid VerticalOptions="StartAndExpand" RowSpacing="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout>
+
+            <Label
             x:Name="MovieName"
             Text="ss"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
             FontSize="Medium"
             />
-        <Image x:Name="MovieImage"
-               WidthRequest="200"
-               HeightRequest="300"
-               />
-      
-            <Label 
-            x:Name="MovieDuration"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-               Text="{Binding Duration}"
-            FontSize="20"
-            />
 
-            <Label 
-            x:Name="MovieMainActor"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-               Text="{Binding MainActor}"
-            FontSize="20"
-            />
+            <Image
+           x:Name="MovieImage"
+           WidthRequest="200"
+           HeightRequest="300"
+           />
 
-            <Label 
-            x:Name="MovieGenre"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-               Text="{Binding Genre}"
-            FontSize="20"
-            />
+        </VerticalStackLayout>
 
-        <Label 
-            x:Name="MovieLanguage"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-               Text="{Binding Language}"
-            FontSize="20"
-            />
+        <StackLayout Grid.Column="1">
 
-        <Button 
+                <StackLayout Orientation="Vertical">
+
+                <Label 
+                x:Name="MovieDuration"
+                Text="{Binding Duration}"
+                FontSize="20"
+                />
+
+                <Label 
+                x:Name="MovieMainActor"
+                Text="{Binding MainActor}"
+                FontSize="20"
+                />
+
+                <Label 
+                x:Name="MovieGenre"
+                Text="{Binding Genre}"
+                FontSize="20"
+                />
+
+                <Label 
+                x:Name="MovieLanguage"
+                Text="{Binding Language}"
+                FontSize="20"
+                />
+            </StackLayout>
+
+           
+                <Button 
             x:Name="BuyTickets"
             Text="Buy Tickets"
             WidthRequest="300"
-            Clicked="BuyTickets_Clicked"/>
-        
-    </VerticalStackLayout>
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Clicked="BuyTickets_Clicked"
+                   />
+           
+
+        </StackLayout>
+
+    </Grid>
+
+
 </ContentPage>
