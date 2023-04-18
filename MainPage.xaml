@@ -25,6 +25,7 @@
                       >
                 <ListView.ItemTemplate>
                     <DataTemplate>
+                        
                        
                         <ViewCell>
                             <HorizontalStackLayout
@@ -40,6 +41,8 @@
                                        FontSize="20"
 
                                        />
+                                
+
                             </HorizontalStackLayout>
 
                         </ViewCell>
@@ -47,8 +50,10 @@
                     </DataTemplate>
 
                 </ListView.ItemTemplate>
+                
 
             </ListView>
+            
 
 
         </VerticalStackLayout>
