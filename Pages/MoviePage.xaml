@@ -57,7 +57,7 @@
             </StackLayout>
 
            
-                <Button 
+           <Button 
             x:Name="BuyTickets"
             Text="Buy Tickets"
             WidthRequest="300"
