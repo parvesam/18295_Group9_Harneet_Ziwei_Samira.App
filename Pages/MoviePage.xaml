@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MoviePage"
-             Title="MoviePage">
+             Title="Movie Page"
+             BackgroundColor="#A0D93F">
     
     <ScrollView>
         
@@ -14,19 +15,19 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Row="0" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Start" Spacing="20">
-                <Label x:Name="MovieName" Text="ss" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label x:Name="MovieName" Text="ss" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Black"/>
                 <Image x:Name="MovieImage" WidthRequest="200" HeightRequest="300" />
             </StackLayout>
 
             <StackLayout Grid.Row="0" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
-                <Label x:Name="MovieDuration" Text="{Binding Duration}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End"/>
-                <Label x:Name="MovieMainActor" Text="{Binding MainActor}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End"/>
-                <Label x:Name="MovieGenre" Text="{Binding Genre}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End"/>
-                <Label x:Name="MovieLanguage" Text="{Binding Language}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Label x:Name="MovieDuration" Text="{Binding Duration}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End" TextColor="Black"/>
+                <Label x:Name="MovieMainActor" Text="{Binding MainActor}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End" TextColor="Black"/>
+                <Label x:Name="MovieGenre" Text="{Binding Genre}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End" TextColor="Black"/>
+                <Label x:Name="MovieLanguage" Text="{Binding Language}" FontSize="20" VerticalOptions="Center" HorizontalOptions="End" TextColor="Black" />
             </StackLayout>
 
             <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
-                <Button x:Name="BuyTickets" Text="Buy Tickets" WidthRequest="300" Clicked="BuyTickets_Clicked"/>
+                <Button x:Name="BuyTickets" Text="Buy Tickets" WidthRequest="300" Clicked="BuyTickets_Clicked" BackgroundColor="#AD31D6" TextColor="Black"/>
             </StackLayout>
         </Grid>
        

@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.HomePage"
-             Title="HomePage"
+             Title="Home Page"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#5885F5">
+             BackgroundColor="#A0D93F">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center" Spacing="20">
         <Label 
             Text="Welcome to Cinemagic!"
+            FontSize="Large"
+            TextColor="Black"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             />
@@ -20,8 +22,9 @@
         <Button 
             Clicked="Button_Clicked"
             BackgroundColor="#AD31D6"
-            TextColor="#edf5e1"
+            TextColor="Black"
             Text="Book Your Tickets!"
+            WidthRequest="300"
             FontSize="30"
             />
 
