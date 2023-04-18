@@ -1,10 +1,10 @@
 ﻿using System;
-
+using _18295_Group9_Harneet_Ziwei_Samira.Pages;
 public class Ticket
 {
     
     
-		public string MovieName { get; set; }
+    public string MovieName { get; set; }
 	public string Location { get; set; }
 	public int NumberOfAdultTickets { get; set; }
     public int NumberOfKidTickets
@@ -26,9 +26,6 @@ public class Ticket
     {
         
         double price;
-       
-
-        
         price= (15 * NumberOfAdultTickets)+ (10 * NumberOfKidTickets);
         return price;
     }

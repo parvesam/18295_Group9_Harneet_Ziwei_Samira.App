@@ -15,7 +15,8 @@
                WidthRequest="200"
                HeightRequest="300"
                />
-        <Label 
+      
+            <Label 
             x:Name="MovieDuration"
             VerticalOptions="Center"
             HorizontalOptions="Center"
@@ -23,7 +24,7 @@
             FontSize="20"
             />
 
-        <Label 
+            <Label 
             x:Name="MovieMainActor"
             VerticalOptions="Center"
             HorizontalOptions="Center"
@@ -31,7 +32,7 @@
             FontSize="20"
             />
 
-        <Label 
+            <Label 
             x:Name="MovieGenre"
             VerticalOptions="Center"
             HorizontalOptions="Center"

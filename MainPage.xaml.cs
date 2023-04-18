@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
     {
 
         var selectedMovie = MoviesListView.SelectedItem as Movie;
-        Navigation.PushAsync(new BookTicket(selectedMovie));
+        Navigation.PushAsync(new MoviePage(selectedMovie));
     }
 }
 

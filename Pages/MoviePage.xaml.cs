@@ -24,7 +24,6 @@ public partial class MoviePage : ContentPage
 
     void BuyTickets_Clicked(object sender, EventArgs e)
     {
-       
-      //  Navigation.PushAsync(new BookTicket());
+        Navigation.PushAsync(new BookTicket(_movies));
     }
 }
