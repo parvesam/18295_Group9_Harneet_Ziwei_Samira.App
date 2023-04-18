@@ -4,14 +4,22 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MoviePage"
              Title="Movie Page"
              BackgroundColor="#A0D93F">
-    
+
     <ScrollView>
-        
+
         <Grid>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
+
+            <Label  Text="Movie Selected"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
 
             <StackLayout Grid.Row="0" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Start" Spacing="20">
                 <Label x:Name="MovieName" Text="ss" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Black"/>
