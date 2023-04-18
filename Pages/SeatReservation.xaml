@@ -6,12 +6,15 @@
              Title="SeatReservation">
     <ContentPage.Resources>
         <Style TargetType="ImageButton">
-            <Setter Property="Source" Value="chair.png">
+            <Setter Property="Source" Value="chair.png" >
 
 
             </Setter>
 
             <Setter Property="BackgroundColor" Value="white">
+
+            </Setter>
+            <Setter Property="HeightRequest" Value="20">
 
             </Setter>
             <Setter Property="CornerRadius" Value="10">
@@ -27,20 +30,37 @@
 
 
 
-    <ScrollView>
+    <ScrollView HorizontalScrollBarVisibility="Always">
         <VerticalStackLayout
                >
+            
 
             <Label  Text="Book Your Seat"
                     FontSize="Large"
                     HorizontalOptions="Center"
                     Padding="20"
                     />
-            <Label  Text="Please choose the number of tickets."
+        
+        <HorizontalStackLayout>
+        <Label  Text="Please choose the number of tickets."
                     FontSize="Medium"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     Padding="20"
                     />
+                <Image x:Name="cart"
+                       Source="cart.png"
+                       VerticalOptions="EndAndExpand"
+                       HeightRequest="30">
+                    
+                </Image>
+                <Label  Text="2"
+                    FontSize="Small"
+                    
+                    Padding="50"
+                    />
+
+            </HorizontalStackLayout>
+            
             <HorizontalStackLayout>
 
                 <Label  Text="Please choose the number of tickets for kids (under 12 years old)."
@@ -68,65 +88,7 @@
                  ValueChanged="Adult_Stepper_ValueChanged"      />
             </HorizontalStackLayout>
 
-            <!--<ListView x:Name="SeatsListView"
-                      RowHeight="150"
-                      ItemSelected="SeatsListView_ItemSelected" 
-
-                      >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-
-                        <ViewCell>
-                           
-                                <FlexLayout Direction="Row"
-            AlignItems="Center"
-            JustifyContent="SpaceEvenly"
-                                VerticalOptions="Start"
-                                >-->
-                                <!--<Grid>
-                                    <Grid.RowDefinitions>
-                                        
-                                        <RowDefinition />
-                                        <RowDefinition  />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                    </Grid.ColumnDefinitions>
-
-
-
-
-                                    <Image Source="{Binding SeatPhoto}"
-                                       HeightRequest="25"
-                                       WidthRequest="25"
-                                           Grid.ColumnSpan="2"
-                                          
-                                       
-                                       />
-                                <Label Text="{Binding RowName}"
-                                       VerticalOptions="Start"
-                                       Grid.Row="1"
-                                       
-
-                                       />
-                                <Label Text="{Binding SeatNumberinRow}"
-                                       Grid.Column="1"
-                                       Grid.Row="1"
-                                      
-
-                                       />
-                                </Grid>-->
-
-                            <!--</FlexLayout>
-
-                        </ViewCell>
-
-                    </DataTemplate>
-
-                </ListView.ItemTemplate>
-
-            </ListView>-->
+            
             <Grid
     ColumnSpacing="10"
     RowSpacing="10"
@@ -197,7 +159,12 @@
 
             </Grid>
 
-
+            <Button x:Name="ContinueToPaymentPage"
+                    Text="Proceed to Pay"
+                    Clicked="ContinueToPaymentPage_Clicked" 
+                    >
+                
+            </Button>
 
 
 
