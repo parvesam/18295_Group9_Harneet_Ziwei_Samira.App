@@ -17,7 +17,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 
         public static void PopulateMap(int NoofSeats)
         {
-            string[,] seats = new string[5, 10];
+            string[,] seats = new string[5, 8];
             
             foreach (var seat in seats)
             {
@@ -64,16 +64,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                     seats[2, 7] = "chair.png";
                     seats[3, 7] = "chair.png";
                     seats[4, 7] = "chair.png";
-                    seats[0, 8] = "chair.png";
-                    seats[1, 8] = "chair.png";
-                    seats[2, 8] = "chair.png";
-                    seats[3, 8] = "chair.png";
-                    seats[4, 8] = "chair.png";
-                    seats[0, 9] = "chair.png";
-                    seats[1, 9] = "chair.png";
-                    seats[2, 9] = "chair.png";
-                    seats[3, 9] = "chair.png";
-                    seats[4, 9] = "chair.png";
+                    
 
                     
                 }

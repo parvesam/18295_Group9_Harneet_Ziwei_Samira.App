@@ -9,6 +9,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
     internal class SeatRepository
     {
         public static List<Seat> seats;
+        private string[,] _images = new string[4, 7];
 
         public SeatRepository(Hall hall)
         {
@@ -120,6 +121,16 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
                     result.Add(seat);
             }
             return result;
+        }
+        private void PopulateImages()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    _images[i, j] = "chair.png";
+                }
+            }
         }
     }
 }
