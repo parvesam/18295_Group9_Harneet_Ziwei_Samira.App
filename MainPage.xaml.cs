@@ -12,14 +12,16 @@ public partial class MainPage : ContentPage
 
     }
 
-	void SearchEntry_TextChanged(object sender, EventArgs e)
-	{
-        MoviesListView.ItemsSource = MoviesRepository.SearchByName(SearchEntry.Text);
-    }
-    void MoviesListView_ItemSelected(System.Object sender, Microsoft.Maui.Controls.SelectedItemChangedEventArgs e)
+    private void SearchEntry_TextChanged(object sender, TextChangedEventArgs e)
     {
+
+    }
+
+    private void MoviesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+
         var selectedMovie = MoviesListView.SelectedItem as Movie;
-        Navigation.PushAsync(new MoviePage(selectedMovie));
+        Navigation.PushAsync(new BookTicket(selectedMovie));
     }
 }
 

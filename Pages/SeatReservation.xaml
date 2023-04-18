@@ -4,7 +4,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.SeatReservation"
              Title="SeatReservation">
-
     <ContentPage.Resources>
         <Style TargetType="ImageButton">
             <Setter Property="Source" Value="chair.png">
@@ -12,7 +11,7 @@
 
             </Setter>
 
-            <Setter Property="BackgroundColor" Value="Blue">
+            <Setter Property="BackgroundColor" Value="white">
 
             </Setter>
             <Setter Property="CornerRadius" Value="10">
@@ -26,45 +25,186 @@
         </Style>
     </ContentPage.Resources>
 
-    <Grid
-        ColumnSpacing="10"
-        RowSpacing="10"
-        x:Name="ImagesGrid">
 
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
 
-        <ImageButton Clicked="ImageButton_Clicked"    />
-        <ImageButton Grid.Column="1" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Column="2" Clicked="ImageButton_Clicked"  />
-        <ImageButton Grid.Column="3"  Clicked="ImageButton_Clicked"/>
+    <ScrollView>
+        <VerticalStackLayout
+               >
 
-        <ImageButton Grid.Row="1" Grid.Column="0" Clicked="ImageButton_Clicked"  />
-        <ImageButton Grid.Row="1" Grid.Column="1" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="1" Grid.Column="2" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="1" Grid.Column="3"  Clicked="ImageButton_Clicked"/>
+            <Label  Text="Book Your Seat"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+            <Label  Text="Please choose the number of tickets."
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+            <HorizontalStackLayout>
 
-        <ImageButton Grid.Row="2" Grid.Column="0" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="2" Grid.Column="1" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="2" Grid.Column="2" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="2" Grid.Column="3" Clicked="ImageButton_Clicked" />
+                <Label  Text="Please choose the number of tickets for kids (under 12 years old)."
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <Stepper x:Name="Kid_Stepper"
+                     Maximum="360"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 ValueChanged="Kid_Stepper_ValueChanged"             />
+            </HorizontalStackLayout>
 
-        <ImageButton Grid.Row="3" Grid.Column="0" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="3" Grid.Column="1" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="3" Grid.Column="2" Clicked="ImageButton_Clicked" />
-        <ImageButton Grid.Row="3" Grid.Column="3" Clicked="ImageButton_Clicked" />
+            <HorizontalStackLayout>
+                <Label  Text="Please choose the number of tickets for adults."
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <Stepper x:Name="Adult_Stepper"
+                     Maximum="360"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 ValueChanged="Adult_Stepper_ValueChanged"      />
+            </HorizontalStackLayout>
 
-    </Grid>
+            <!--<ListView x:Name="SeatsListView"
+                      RowHeight="150"
+                      ItemSelected="SeatsListView_ItemSelected" 
 
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell>
+                           
+                                <FlexLayout Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly"
+                                VerticalOptions="Start"
+                                >-->
+                                <!--<Grid>
+                                    <Grid.RowDefinitions>
+                                        
+                                        <RowDefinition />
+                                        <RowDefinition  />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+
+
+
+                                    <Image Source="{Binding SeatPhoto}"
+                                       HeightRequest="25"
+                                       WidthRequest="25"
+                                           Grid.ColumnSpan="2"
+                                          
+                                       
+                                       />
+                                <Label Text="{Binding RowName}"
+                                       VerticalOptions="Start"
+                                       Grid.Row="1"
+                                       
+
+                                       />
+                                <Label Text="{Binding SeatNumberinRow}"
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                      
+
+                                       />
+                                </Grid>-->
+
+                            <!--</FlexLayout>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>-->
+            <Grid
+    ColumnSpacing="10"
+    RowSpacing="10"
+    x:Name="ImagesGrid">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Clicked="ImageButton_Clicked"  />
+                <ImageButton Grid.Column="1" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Column="2" Clicked="ImageButton_Clicked"  />
+                <ImageButton Grid.Column="3"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Column="4"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Column="5"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Column="6"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Column="7"  Clicked="ImageButton_Clicked"/>
+
+                <ImageButton Grid.Row="1" Grid.Column="0" Clicked="ImageButton_Clicked"  />
+                <ImageButton Grid.Row="1" Grid.Column="1" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="1" Grid.Column="2" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="1" Grid.Column="3"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="1" Grid.Column="4"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="1" Grid.Column="5"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="1" Grid.Column="6"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="1" Grid.Column="7"  Clicked="ImageButton_Clicked"/>
+
+                <ImageButton Grid.Row="2" Grid.Column="0" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="2" Grid.Column="1" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="2" Grid.Column="2" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="2" Grid.Column="3" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="2" Grid.Column="4"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="2" Grid.Column="5"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="2" Grid.Column="6"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="2" Grid.Column="7"  Clicked="ImageButton_Clicked"/>
+
+                <ImageButton Grid.Row="3" Grid.Column="0" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="3" Grid.Column="1" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="3" Grid.Column="2" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="3" Grid.Column="3" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="3" Grid.Column="4"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="3" Grid.Column="5"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="3" Grid.Column="6"  Clicked="ImageButton_Clicked"/>
+                <ImageButton Grid.Row="3" Grid.Column="7"  Clicked="ImageButton_Clicked"/>
+
+                <ImageButton Grid.Row="4" Grid.Column="0" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="1" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="2" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="3" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="4" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="5" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="6" Clicked="ImageButton_Clicked" />
+                <ImageButton Grid.Row="4" Grid.Column="7" Clicked="ImageButton_Clicked" />
+
+            </Grid>
+
+
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
+

@@ -58,7 +58,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\MoviePage.xaml">
+	  <MauiXaml Update="Pages\TicketConfirmation.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\BookTicket.xaml">
