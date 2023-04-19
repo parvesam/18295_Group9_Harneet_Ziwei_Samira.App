@@ -4,9 +4,40 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Models.TicketConfirmation"
              Title="TicketConfirmation">
     <VerticalStackLayout>
+        <Label
+            Text="Thank you ! Your tickets have been booked. Please check your email"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+
         <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="MovieLabel"
+            Text="Movie Name: "
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Label
+            x:Name="CinemaLebal"
+            Text="Location: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Label
+            x:Name="HallNameLabel"
+            Text="Hall Name: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Label
+            x:Name="ScheduleLabel"
+            Text="Time: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Label
+            x:Name="SeatsLabel"
+            Text="Seat Number: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>
