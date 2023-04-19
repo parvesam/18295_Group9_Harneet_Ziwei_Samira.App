@@ -18,6 +18,7 @@
             <Entry
                     x:Name="SearchEntry"
                     Placeholder="Search"
+                    TextColor="Black"
                     TextChanged="SearchEntry_TextChanged"   
 
                     />
