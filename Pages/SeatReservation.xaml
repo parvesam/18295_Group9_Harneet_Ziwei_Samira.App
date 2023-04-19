@@ -11,7 +11,7 @@
 
             </Setter>
 
-            <Setter Property="BackgroundColor" Value="white">
+            <Setter Property="BackgroundColor" Value="Blue">
 
             </Setter>
             <Setter Property="HeightRequest" Value="20">
@@ -158,10 +158,26 @@
                 <ImageButton Grid.Row="4" Grid.Column="7" Clicked="ImageButton_Clicked" />
 
             </Grid>
+            <Button x:Name="CheckPrice"
+                    Text="Check Price"
+                    Clicked="CheckPrice_Clicked"     
+                    >
+
+            </Button>
+            <Label  x:Name="PriceLabel"
+                    FontSize="Small"
+                    Text="{Null}"
+                    HorizontalOptions="Center"
+                    Padding="30"
+                   
+                    />
+
+
 
             <Button x:Name="ContinueToPaymentPage"
                     Text="Proceed to Pay"
                     Clicked="ContinueToPaymentPage_Clicked" 
+                    
                     >
                 
             </Button>

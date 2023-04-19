@@ -24,13 +24,7 @@ public class Ticket
 
 
     }
-    public double CalculatePrice(double NumberOfAdultTickets, double NumberOfKidTickets)
-    {
-        
-        double price;
-        price=NumberOfAdultTickets*(double)(TicketType.Adult)+NumberOfKidTickets*(double)(TicketType.Kid);
-        return price;
-    }
+    
 }
 
 
