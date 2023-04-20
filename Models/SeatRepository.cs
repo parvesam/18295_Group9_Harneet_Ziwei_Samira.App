@@ -104,5 +104,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
             _selectedSeats = new List<string>();
             //_selectedSeats.Add("1");
         }
+        public static List<string> ReturnSeats()
+        { return _selectedSeats; } 
     }
 }

@@ -9,11 +9,12 @@ public partial class SeatReservation : ContentPage
     public double NoOfAdultTickets;
     public double NoOfKidTickets;
     
-    public string _chosenSeat { get; set; }
+    private string _chosenSeat { get; set; }
 
     public SeatReservation()
     {
         InitializeComponent();
+       
        
        
 
@@ -28,6 +29,8 @@ public partial class SeatReservation : ContentPage
         double value = e.NewValue;
         
         NoOfKidTickets = value;
+        KidStepperLabel.Text = value.ToString();
+        TotalTicketsLabel.Text = (NoOfKidTickets + NoOfAdultTickets).ToString();
 
     }
 
@@ -36,6 +39,8 @@ public partial class SeatReservation : ContentPage
         double value = e.NewValue;
 
         NoOfAdultTickets = value;
+        AdultStepperLabel.Text = value.ToString();
+        TotalTicketsLabel.Text = (NoOfKidTickets + NoOfAdultTickets).ToString();
     }
 
     private void ImageButton_Clicked(object sender, EventArgs e)

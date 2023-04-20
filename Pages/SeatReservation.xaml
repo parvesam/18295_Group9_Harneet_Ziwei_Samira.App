@@ -20,7 +20,7 @@
             <Setter Property="CornerRadius" Value="10">
 
             </Setter>
-            <Setter Property="Padding" Value="10">
+            <Setter Property="Padding" Value="0">
 
             </Setter>
 
@@ -30,54 +30,73 @@
 
 
 
-    <ScrollView HorizontalScrollBarVisibility="Always">
+    <ScrollView Padding="35">
         <VerticalStackLayout
                >
             
 
             <Label  Text="Book Your Seat"
-                    FontSize="Large"
+                    FontSize="Header"
                     HorizontalOptions="Center"
                     Padding="20"
+                    
                     />
         
-        <HorizontalStackLayout>
+        
         <Label  Text="Please choose the number of tickets."
-                    FontSize="Medium"
+                    FontSize="Subtitle"
                     HorizontalOptions="Start"
                     Padding="20"
                     />
-                <Image x:Name="cart"
-                       Source="cart.png"
-                       VerticalOptions="EndAndExpand"
-                       HeightRequest="30">
+            
+                <StackLayout>
                     
-                </Image>
-                <Label  Text="2"
-                    FontSize="Small"
-                    
-                    Padding="50"
+
+                <Label  
+                    x:Name="TotalTicketsLabel" Text="{Null}"
+                    FontSize="Body"
+                    HorizontalOptions="End"
+                    TextColor="Red"
+                   
+                    Padding="0"
                     />
 
-            </HorizontalStackLayout>
+                    <Image x:Name="cart"
+                       Source="cart.png"
+                      HorizontalOptions="End"
+                       HeightRequest="32"
+                       >
+
+                    </Image>
+                </StackLayout>
             
+
+
             <HorizontalStackLayout>
 
                 <Label  Text="Please choose the number of tickets for kids (under 12 years old)."
-                    FontSize="Medium"
-                    HorizontalOptions="Center"
+                    FontSize="Body"
+                    VerticalOptions="FillAndExpand"
                     Padding="20"
                     />
                 <Stepper x:Name="Kid_Stepper"
                      Maximum="360"
                  Increment="1"
-                 HorizontalOptions="Center"
-                 ValueChanged="Kid_Stepper_ValueChanged"             />
+                 VerticalOptions="FillAndExpand"
+                 ValueChanged="Kid_Stepper_ValueChanged"     
+                         />
+                <Label  x:Name="KidStepperLabel"
+                    FontSize="Body"
+                    Text="{Null}"
+                    HorizontalOptions="Center"
+                    Padding="30"
+                   
+                    />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label  Text="Please choose the number of tickets for adults."
-                    FontSize="Medium"
+                    FontSize="Body"
                     HorizontalOptions="Center"
                     Padding="20"
                     />
@@ -86,6 +105,13 @@
                  Increment="1"
                  HorizontalOptions="Center"
                  ValueChanged="Adult_Stepper_ValueChanged"      />
+                <Label  x:Name="AdultStepperLabel"
+                    FontSize="Body"
+                    Text="{Null}"
+                    HorizontalOptions="Center"
+                    Padding="30"
+                   
+                    />
             </HorizontalStackLayout>
 
             
@@ -160,12 +186,15 @@
             </Grid>
             <Button x:Name="CheckPrice"
                     Text="Check Price"
-                    Clicked="CheckPrice_Clicked"     
+                    Clicked="CheckPrice_Clicked"
+                    HorizontalOptions="Center"
+                    FontSize="Body"
+                     Padding="30"
                     >
 
             </Button>
             <Label  x:Name="PriceLabel"
-                    FontSize="Small"
+                    FontSize="Body"
                     Text="{Null}"
                     HorizontalOptions="Center"
                     Padding="30"
@@ -177,6 +206,8 @@
             <Button x:Name="ContinueToPaymentPage"
                     Text="Proceed to Pay"
                     Clicked="ContinueToPaymentPage_Clicked" 
+                     HorizontalOptions="Center"
+                    FontSize="Body"
                     
                     >
                 
