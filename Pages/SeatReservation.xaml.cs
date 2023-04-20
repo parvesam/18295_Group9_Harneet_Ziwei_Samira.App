@@ -13,15 +13,7 @@ public partial class SeatReservation : ContentPage
 
     public SeatReservation()
     {
-        InitializeComponent();
-       
-       
-       
-
-       
-
-
-       
+        InitializeComponent();     
     }
 
     private void Kid_Stepper_ValueChanged(object sender, ValueChangedEventArgs e)

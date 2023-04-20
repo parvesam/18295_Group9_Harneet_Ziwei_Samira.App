@@ -3,41 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Models.TicketConfirmation"
              Title="TicketConfirmation">
-    <VerticalStackLayout>
-        <Label
-            Text="Thank you ! Your tickets have been booked. Please check your email"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-
-
-        <Label 
-            x:Name="MovieLabel"
-            Text="Movie Name: "
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-
-        <Label
-            x:Name="CinemaLebal"
-            Text="Location: "
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-
-        <Label
-            x:Name="HallNameLabel"
-            Text="Hall Name: "
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-
-        <Label
-            x:Name="ScheduleLabel"
-            Text="Time: "
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-
-        <Label
-            x:Name="SeatsLabel"
-            Text="Seat Number: "
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-    </VerticalStackLayout>
+   <ContentPage.Content>
+		<Grid RowDefinitions="*,*,*,*,*,*"
+		  ColumnDefinitions="*,*">
+			<Label Text="Thank you! Your tickets have been booked. Please check your email"
+			   Grid.Row="0"
+			   Grid.Column="0"
+			   Grid.ColumnSpan="2"
+			   VerticalOptions="Center"
+			   HorizontalOptions="Center"/>
+			<Label Text="Movie Name:"
+			   Grid.Row="1"
+			   Grid.Column="0"
+			   VerticalOptions="Center"
+			   HorizontalOptions="End"/>
+			<Label x:Name="MovieLabel"
+			   Text=""
+			   Grid.Row="1"
+			   Grid.Column="1"
+			   VerticalOptions="Center"
+			   HorizontalOptions="Start"/>
+			<Label Text="Location:"
+			   Grid.Row="2"
+			   Grid.Column="0"
+			   VerticalOptions="Center"
+			   HorizontalOptions="End"/>
+			<Label x:Name="CinemaLabel"
+			   Text=""
+			   Grid.Row="2"
+			   Grid.Column="1"
+			   VerticalOptions="Center"
+			   HorizontalOptions="Start"/>
+			<Label Text="Hall Name:"
+			   Grid.Row="3"
+			   Grid.Column="0"
+			   VerticalOptions="Center"
+			   HorizontalOptions="End"/>
+			<Label x:Name="HallNameLabel"
+			   Text=""
+			   Grid.Row="3"
+			   Grid.Column="1"
+			   VerticalOptions="Center"
+			   HorizontalOptions="Start"/>
+			<Label Text="Time:"
+			   Grid.Row="4"
+			   Grid.Column="0"
+			   VerticalOptions="Center"
+			   HorizontalOptions="End"/>
+			<Label x:Name="ScheduleLabel"
+			   Text=""
+			   Grid.Row="4"
+			   Grid.Column="1"
+			   VerticalOptions="Center"
+			   HorizontalOptions="Start"/>
+			<Label Text="Seat Number:"
+			   Grid.Row="5"
+			   Grid.Column="0"
+			   VerticalOptions="Center"
+			   HorizontalOptions="End"/>
+			<Label x:Name="SeatsLabel"
+			   Text=""
+			   Grid.Row="5"
+			   Grid.Column="1"
+			   VerticalOptions="Center"
+			   HorizontalOptions="Start"/>
+		</Grid>
+	</ContentPage.Content>
 </ContentPage>

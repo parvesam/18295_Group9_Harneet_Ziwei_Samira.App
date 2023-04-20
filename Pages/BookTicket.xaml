@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.BookTicket"
-             Title="BookTicket">
+             Title="BookTicket"
+             BackgroundColor="#6B5FF4">
     <ScrollView>
         <VerticalStackLayout
                >
@@ -11,6 +12,7 @@
                     FontSize="Large"
                     HorizontalOptions="Center"
                     Padding="20"
+                    TextColor="Black"
                     />
            
             <ListView x:Name="LocationListView"
@@ -33,26 +35,31 @@
                                 <Label Text="{Binding Movie.Name}"
                                        VerticalOptions="Center"
                                        FontSize="20"
+                                       TextColor="Black"
 
                                        />
                                 <Label Text="{Binding Hall.HallName}"
                                        HeightRequest="150"
                                        WidthRequest="150"
+                                       TextColor="Black"
                                        
                                        />
                                 <Label Text="{Binding Hall.Name}"
                                        HeightRequest="150"
                                        WidthRequest="150"
+                                       TextColor="Black"
                                        
                                        />
                                 <Label Text="{Binding Hall.Location}"
                                        HeightRequest="150"
                                        WidthRequest="150"
+                                       TextColor="Black"
                                        
                                        />
                                 <Label Text="{Binding DateTime}"
                                        VerticalOptions="Center"
                                        FontSize="20"
+                                       TextColor="Black"
 
                                        />
                             </HorizontalStackLayout>

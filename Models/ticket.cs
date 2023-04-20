@@ -20,8 +20,6 @@ public class Ticket
 	{
 		MovieName= movieName;
 		Location= location;
-        
-
 
     }
     

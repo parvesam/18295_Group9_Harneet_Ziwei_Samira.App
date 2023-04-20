@@ -4,7 +4,7 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.HomePage"
              Title="Home Page"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#A0D93F">
+             BackgroundColor="#6B5FF4">
 
     <VerticalStackLayout VerticalOptions="Center" Spacing="20">
         <Label 

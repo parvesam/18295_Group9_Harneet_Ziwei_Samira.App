@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MainPage"
-             BackgroundColor="#A0D93F"
+             BackgroundColor="#6B5FF4"
              Title="Movie Selection Page">
 
     <ScrollView>

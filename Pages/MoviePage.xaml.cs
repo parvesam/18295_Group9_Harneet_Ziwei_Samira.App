@@ -19,6 +19,7 @@ public partial class MoviePage : ContentPage
         MovieGenre.Text = "Genre: "+_movies.Genre;
         MovieMainActor.Text = "Actor: "+_movies.MainActor;
         MovieLanguage.Text = "Language: "+_movies.Language;
+        MovieDescription.Text = "Description: " + _movies.Description;
         
     }
 
