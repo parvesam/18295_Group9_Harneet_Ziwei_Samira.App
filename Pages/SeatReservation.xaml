@@ -3,7 +3,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.SeatReservation"
-             Title="SeatReservation">
+             Title="SeatReservation"
+             BackgroundColor="#6B5FF4">
     <ContentPage.Resources>
         <Style TargetType="ImageButton">
             <Setter Property="Source" Value="chair.png" >
@@ -39,13 +40,16 @@
                     FontSize="Large"
                     HorizontalOptions="Center"
                     Padding="20"
+                    TextColor="Black"
                     />
         
         <HorizontalStackLayout>
+            
         <Label  Text="Please choose the number of tickets."
                     FontSize="Medium"
                     HorizontalOptions="Start"
                     Padding="20"
+                TextColor="Black"
                     />
                 <Image x:Name="cart"
                        Source="cart.png"
@@ -55,7 +59,7 @@
                 </Image>
                 <Label  Text="2"
                     FontSize="Small"
-                    
+                    TextColor="Black"
                     Padding="50"
                     />
 
@@ -63,9 +67,11 @@
             
             <HorizontalStackLayout>
 
-                <Label  Text="Please choose the number of tickets for kids (under 12 years old)."
+                <Label  
+                    Text="Please choose the number of tickets for kids (under 12 years old)."
                     FontSize="Medium"
                     HorizontalOptions="Center"
+                    TextColor="Black"
                     Padding="20"
                     />
                 <Stepper x:Name="Kid_Stepper"
@@ -76,16 +82,20 @@
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
-                <Label  Text="Please choose the number of tickets for adults."
+                <Label  
+                    Text="Please choose the number of tickets for adults."
                     FontSize="Medium"
                     HorizontalOptions="Center"
                     Padding="20"
+                    TextColor="Black"
                     />
+                
                 <Stepper x:Name="Adult_Stepper"
                      Maximum="360"
                  Increment="1"
                  HorizontalOptions="Center"
-                 ValueChanged="Adult_Stepper_ValueChanged"      />
+                 ValueChanged="Adult_Stepper_ValueChanged"
+                 />
             </HorizontalStackLayout>
 
             
@@ -160,7 +170,11 @@
             </Grid>
             <Button x:Name="CheckPrice"
                     Text="Check Price"
-                    Clicked="CheckPrice_Clicked"     
+                    Clicked="CheckPrice_Clicked"   
+                    BackgroundColor="#AD31D6"
+                    WidthRequest="300"
+                    TextColor="Black"
+                    FontSize="30"
                     >
 
             </Button>
@@ -169,6 +183,7 @@
                     Text="{Null}"
                     HorizontalOptions="Center"
                     Padding="30"
+                    TextColor="Black"
                    
                     />
 
@@ -177,7 +192,10 @@
             <Button x:Name="ContinueToPaymentPage"
                     Text="Proceed to Pay"
                     Clicked="ContinueToPaymentPage_Clicked" 
-                    
+                    BackgroundColor="#AD31D6"
+                     WidthRequest="300"
+                    TextColor="Black"
+                    FontSize="30"
                     >
                 
             </Button>

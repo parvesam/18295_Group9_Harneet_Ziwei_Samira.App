@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MoviePage"
              Title="Movie Page"
-             BackgroundColor="#A0D93F">
+             BackgroundColor="#6B5FF4">
 
     <ScrollView>
         <Grid>
@@ -82,7 +82,8 @@
                     WidthRequest="300"
                     Clicked="BuyTickets_Clicked"
                     BackgroundColor="#AD31D6"
-                    TextColor="Black" />
+                    TextColor="Black"
+                        FontSize="30"/>
             </StackLayout>
         </Grid>
     </ScrollView>

@@ -4,9 +4,14 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.PaymentPage"
              Title="PaymentPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Button x:Name="Confirmed"
+                    Text="Confirmed"
+                    WidthRequest="300"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Clicked="Confirmed_Clicked"
+                    BackgroundColor="#AD31D6"
+                    TextColor="Black" 
+                FontSize="30"/>
     </VerticalStackLayout>
 </ContentPage>
