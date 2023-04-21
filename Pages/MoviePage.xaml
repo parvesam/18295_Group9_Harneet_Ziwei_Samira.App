@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MoviePage"
              Title="Movie Page"
-             BackgroundColor="#6B5FF4">
+             BackgroundColor="Black">
 
     <ScrollView>
         <Grid>
@@ -13,7 +13,7 @@
             </Grid.RowDefinitions>
 
             <Label Text="Movie Selected"
-               TextColor="Black"
+               TextColor="White"
                FontSize="Large"
                HorizontalOptions="Center"
                Padding="20"/>
@@ -28,7 +28,7 @@
                    FontSize="Medium"
                    VerticalOptions="Center"
                    HorizontalOptions="Start"
-                   TextColor="Black" />
+                   TextColor="White" />
                 <Image x:Name="MovieImage"
                    WidthRequest="200"
                    HeightRequest="300"
@@ -38,7 +38,7 @@
                    FontSize="Medium"
                    VerticalOptions="Center"
                    HorizontalOptions="Start"
-                   TextColor="Black"/>
+                   TextColor="White"/>
             </StackLayout>
 
             <StackLayout Grid.Row="0"
@@ -51,25 +51,25 @@
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="CenterAndExpand"
-                   TextColor="Black" />
+                   TextColor="White" />
                 <Label x:Name="MovieDuration"
                    Text="{Binding Duration}"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="CenterAndExpand"
-                   TextColor="Black" />
+                   TextColor="White" />
                 <Label x:Name="MovieGenre"
                    Text="{Binding Genre}"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="CenterAndExpand"
-                   TextColor="Black" />
+                   TextColor="White" />
                 <Label x:Name="MovieLanguage"
                    Text="{Binding Language}"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="CenterAndExpand"
-                   TextColor="Black" />
+                   TextColor="White" />
             </StackLayout>
 
             <StackLayout Grid.Row="1"
@@ -81,8 +81,8 @@
                     Text="Buy Tickets"
                     WidthRequest="300"
                     Clicked="BuyTickets_Clicked"
-                    BackgroundColor="#AD31D6"
-                    TextColor="Black"
+                    BackgroundColor="Pink"
+                    TextColor="White"
                         FontSize="30"/>
             </StackLayout>
         </Grid>

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.MainPage"
-             BackgroundColor="#6B5FF4"
+             BackgroundColor="Black"
              Title="Movie Selection Page">
 
     <ScrollView>
@@ -10,7 +10,7 @@
                >
 
             <Label  Text="Movie List"
-                    TextColor="Black"
+                    TextColor="White"
                     FontSize="Large"
                     HorizontalOptions="Center"
                     Padding="20"
@@ -18,7 +18,7 @@
             <Entry
                     x:Name="SearchEntry"
                     Placeholder="Search"
-                    TextColor="Black"
+                    TextColor="White"
                     TextChanged="SearchEntry_TextChanged"   
 
                     />
@@ -43,7 +43,7 @@
                                 <Label Text="{Binding Name}"
                                        VerticalOptions="Center"
                                        FontSize="20"
-                                       TextColor="Black"
+                                       TextColor="White"
 
                                        />
                                 

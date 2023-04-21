@@ -4,13 +4,13 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.HomePage"
              Title="Home Page"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#6B5FF4">
+             BackgroundColor="Black" >
 
     <VerticalStackLayout VerticalOptions="Center" Spacing="20">
         <Label 
             Text="Welcome to Cinemagic!"
             FontSize="Large"
-            TextColor="Black"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             />
@@ -21,8 +21,8 @@
 
         <Button 
             Clicked="Button_Clicked"
-            BackgroundColor="#AD31D6"
-            TextColor="Black"
+            BackgroundColor="Pink"
+            TextColor="White"
             Text="Book Your Tickets!"
             WidthRequest="300"
             FontSize="30"

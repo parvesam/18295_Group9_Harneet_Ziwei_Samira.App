@@ -201,6 +201,8 @@
                              TextColor="Black"
                             BackgroundColor="Yellow"
                             HorizontalOptions="Center"
+                            WidthRequest="300"
+                            FontSize="30"
                             
                     >
 
@@ -222,6 +224,8 @@
                             TextColor="Black"
                             BackgroundColor="Green"
                             HorizontalOptions="Center"
+                            WidthRequest="300"
+                            FontSize="30"
                     
                     >
 

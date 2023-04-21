@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.PaymentPage"
              Title="PaymentPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="End">
         <Button x:Name="Confirmed"
                     Text="Confirmed"
                     WidthRequest="300"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center"
                     Clicked="Confirmed_Clicked"
-                    BackgroundColor="#AD31D6"
+                    BackgroundColor="Pink"
                     TextColor="Black" 
                 FontSize="30"/>
     </VerticalStackLayout>
