@@ -34,6 +34,9 @@
                                 <Label Text="{Binding newSchedule.Hall.HallName}"
                                        FontAttributes="Bold"
                                        TextColor="DarkBlue" />
+                                <Label Text="{Binding newSchedule.DateTime}"
+                                       FontAttributes="Bold"
+                                       TextColor="Brown" />
                             </StackLayout>
                             <StackLayout Grid.Column="2">
                                 <Label Text="{Binding newSchedule.Hall.Location}"
