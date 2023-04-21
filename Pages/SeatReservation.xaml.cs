@@ -9,7 +9,7 @@ public partial class SeatReservation : ContentPage
     public double NoOfAdultTickets;
     public double NoOfKidTickets;
     
-    public string _chosenSeat { get; set; }
+    private string _chosenSeat { get; set; }
 
     public SeatReservation()
     {
@@ -21,6 +21,8 @@ public partial class SeatReservation : ContentPage
         double value = e.NewValue;
         
         NoOfKidTickets = value;
+        KidStepperLabel.Text = value.ToString();
+        TotalTicketsLabel.Text = (NoOfKidTickets + NoOfAdultTickets).ToString();
 
     }
 
@@ -29,17 +31,20 @@ public partial class SeatReservation : ContentPage
         double value = e.NewValue;
 
         NoOfAdultTickets = value;
+        AdultStepperLabel.Text = value.ToString();
+        TotalTicketsLabel.Text = (NoOfKidTickets + NoOfAdultTickets).ToString();
     }
 
     private void ImageButton_Clicked(object sender, EventArgs e)
     {
         var button = (ImageButton)sender;
         var col = ImagesGrid.GetColumn(button);
-        var SelecetdRowNumber = SeatRepository.ConvertToRowLabel(col);
+        var row = ImagesGrid.GetRow(button);
+        var SelecetdRowNumber = SeatRepository.ConvertToRowLabel(row);
         var SelecetdSeatNumberinRow = SeatRepository.ConvertToSeatNumberinRow(col);
 
 
-        var row = ImagesGrid.GetRow(button);
+      
         
        
         _chosenSeat = SeatRepository.CombineNumbers(row, col);
@@ -47,7 +52,7 @@ public partial class SeatReservation : ContentPage
         if (seatIsSelectedAlready)
         {
             SeatRepository.RemoveSelectedSeat(_chosenSeat);
-            button.BackgroundColor = Colors.Blue;
+            button.BackgroundColor = Colors.White;
         }
         else if (!seatIsSelectedAlready)
         {
