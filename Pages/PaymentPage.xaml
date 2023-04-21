@@ -4,8 +4,8 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.PaymentPage"
              Title="PaymentPage">
     <VerticalStackLayout
-        VerticalOptions="Center" 
-        HorizontalOptions="End">
+        VerticalOptions="End" 
+        HorizontalOptions="Center">
         <Button x:Name="Confirmed"
                     Text="Confirmed"
                     WidthRequest="300"
