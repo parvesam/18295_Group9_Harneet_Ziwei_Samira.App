@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.PaymentPage"
-             Title="PaymentPage">
-    <StackLayout Padding="20">
+             Title="PaymentPage"
+             >
+
+    <StackLayout Padding="20" Spacing="15">
         <Label Text="How would you like to pay?" />
         <Picker x:Name="PaymentMethodPicker" SelectedIndex="0">
             <Picker.ItemsSource>
@@ -14,32 +16,16 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="Card Number:" Grid.Column="0" />
-            <Entry x:Name="CardNumberEntry" Grid.Column="1" />
-        </Grid>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="Name:" Grid.Column="0" />
-            <Entry x:Name="NameEntry" Grid.Column="1" />
-        </Grid>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="Email Address (Optional):" Grid.Column="0" />
-            <Entry x:Name="EmailEntry" Grid.Column="1" />
+        <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+            <Label Text="Card Number:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="CardNumberEntry" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+            <Label Text="Name:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="NameEntry" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" />
+            <Label Text="Email Address (Optional):" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="EmailEntry" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" />
         </Grid>
         <Label Text="Would you like to receive tickets in email?" />
         <Switch x:Name="ReceiveTicketsSwitch" />
-        <Button Text="Click to Confirm" Clicked="OnConfirmClicked" />
+        <Button Text="Click to Confirm" Clicked="OnConfirmClicked" BackgroundColor="#007AFF" TextColor="White" />
     </StackLayout>
 </ContentPage>
