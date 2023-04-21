@@ -5,7 +5,6 @@ using System;
 public partial class PaymentPage : ContentPage
 {
     private bool emailOptionSelected;
-    private Ticket bookedTicket;
 
     public PaymentPage()
 	{
@@ -14,24 +13,25 @@ public partial class PaymentPage : ContentPage
 
     void OnConfirmClicked(object sender, EventArgs e)
     {
-        //if (CardNumberEntry.Text.Length != 10)
-        //{
-        //    DisplayAlert("Error", "Incorrect card number. Please enter a 10-digit card number.", "OK");
-        //    return;
-        //}
+        if (CardNumberEntry.Text.Length != 10)
+        {
+            DisplayAlert("Error", "Incorrect card number. Please enter a 10-digit card number.", "OK");
+            return;
+        }
 
-        //if (string.IsNullOrWhiteSpace(NameEntry.Text))
-        //{
-        //    DisplayAlert("Error", "Please enter your name.", "OK");
-        //    return;
-        //}
+        if (string.IsNullOrWhiteSpace(NameEntry.Text))
+        {
+            DisplayAlert("Error", "Please enter your name.", "OK");
+            return;
+        }
 
-        //if (!string.IsNullOrWhiteSpace(EmailEntry.Text) && !IsValidEmail(EmailEntry.Text))
-        //{
-        //    DisplayAlert("Error", "Please enter a valid email address.", "OK");
-        //    return;
-        //}
-         Navigation.PushAsync(new TicketConfirmation(emailOptionSelected,bookedTicket));
+        if (!string.IsNullOrWhiteSpace(EmailEntry.Text) && !IsValidEmail(EmailEntry.Text))
+        {
+            DisplayAlert("Error", "Please enter a valid email address.", "OK");
+              return;
+        }
+        emailOptionSelected = ReceiveTicketsSwitch.IsToggled;
+        Navigation.PushAsync(new TicketConfirmation(emailOptionSelected));
     }
 
     bool IsValidEmail(string email)
