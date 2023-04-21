@@ -12,8 +12,9 @@ public partial class PaymentPage : ContentPage
     }
 
     void OnConfirmClicked(object sender, EventArgs e)
+
     {
-        if (CardNumberEntry.Text.Length != 10)
+       if (CardNumberEntry.Text.Length != 10)
         {
             DisplayAlert("Error", "Incorrect card number. Please enter a 10-digit card number.", "OK");
             return;
