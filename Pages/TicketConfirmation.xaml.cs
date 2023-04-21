@@ -19,6 +19,6 @@ public partial class TicketConfirmation : ContentPage
 
         Tickets.Add(bookedTicket);
 
-        TicketsListView.ItemsSource = Tickets;
+        TicketsListView.ItemsSource = TicketRepository.GetTickets();
     }
 }

@@ -55,7 +55,7 @@
 
                     <Label  
                     x:Name="TotalTicketsLabel" Text="{Null}"
-                    FontSize="Body"
+                    FontSize="Medium"
                     HorizontalOptions="End"
                     TextColor="Yellow"
                    

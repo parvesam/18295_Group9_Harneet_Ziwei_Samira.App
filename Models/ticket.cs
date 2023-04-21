@@ -10,16 +10,15 @@ public class Ticket
 {
     
     
-    public string MovieName { get; set; }
-	public string Location { get; set; }
+   
     public string SeatNumber { get; set; }
-	
+	public Schedule newSchedule { get; set; }
 
 
-    public Ticket(string movieName, string location )
-	{
-		MovieName= movieName;
-		Location= location;
+    public Ticket(Schedule schedule, string seatnumber)
+	{newSchedule= schedule; 
+		
+        SeatNumber= seatnumber;
 
     }
     

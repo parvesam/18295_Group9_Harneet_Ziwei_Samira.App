@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 {
-    internal class Schedule
+    public class Schedule
     {
         public Movie Movie { get; set; }
         public Hall Hall { get; set; }

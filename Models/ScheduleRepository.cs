@@ -21,24 +21,27 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
             // Get all halls from the hall repository
             var halls = HallRepository.GetAllHalls();
 
-            // Create a schedule for each movie in each hall
             foreach (var movie in movies)
             {
+                DateTime scheduleDateTime = DateTime.Now.AddDays(1).AddHours(new Random().Next(0, 24)); // Generate a random datetime for the current movie
+
                 foreach (var hall in halls)
                 {
-                    // Create a new schedule with the current movie and hall
+                    // Create a new schedule with the current movie, hall, and random datetime
                     var schedule = new Schedule
                     {
                         Movie = movie,
                         Hall = hall,
-                        DateTime = DateTime.Now.AddDays(1) // Set the schedule for tomorrow
+                        DateTime = scheduleDateTime
                     };
 
                     // Add the schedule to the list
                     schedules.Add(schedule);
                 }
             }
-        }
+
+        
+    }
 
         // Get all schedules in the list
         public IEnumerable<Schedule> GetAllSchedules()
@@ -58,5 +61,6 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
             }
             return result;
         }
+       
     }
 }

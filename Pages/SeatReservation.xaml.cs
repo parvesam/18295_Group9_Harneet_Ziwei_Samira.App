@@ -8,12 +8,14 @@ public partial class SeatReservation : ContentPage
 {
     public double NoOfAdultTickets;
     public double NoOfKidTickets;
+    private Schedule newSchedule;
     
     private string _chosenSeat { get; set; }
 
-    public SeatReservation()
+    public SeatReservation(Schedule schedule)
     {
-        InitializeComponent();     
+        InitializeComponent();
+        newSchedule= schedule;
     }
 
     private void Kid_Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -66,7 +68,9 @@ public partial class SeatReservation : ContentPage
     }
 
     private void ContinueToPaymentPage_Clicked(object sender, EventArgs e)
-    {
+
+    {var GetSeats=SeatRepository.GetSelectedSeats();
+        TicketRepository.CreateTicket(newSchedule, GetSeats);
         Navigation.PushAsync(new PaymentPage());
     }
 

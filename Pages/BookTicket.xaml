@@ -22,7 +22,8 @@
 
             </Image>
         </HorizontalStackLayout>
-        
+           
+
 
 
             <ListView x:Name="LocationListView"

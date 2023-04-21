@@ -12,12 +12,11 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="{Binding SeatNumber}" />
-                                <Label Text="{Binding ShowTime}" />
-                                <Label Text="{Binding Location}" />
-                                <Label Text="{Binding HallName}" />
-                                <Label Text="{Binding MovieName}" />
-                            </StackLayout>
+                                <Label Text="{Binding newSchedule.Movie.Name}" />
+                                <Label Text="{Binding newSchedule.Hall.HallName}" />
+                                <Label Text="{Binding newSchedule.Hall.Location}" />
+                            <ListView ItemsSource="{Binding SeatNumber}" />
+                        </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

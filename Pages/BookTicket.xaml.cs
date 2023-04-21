@@ -14,7 +14,8 @@ public partial class BookTicket : ContentPage
     void LocationListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         var selectedSchedule = LocationListView.SelectedItem as Schedule;
-        Navigation.PushAsync(new SeatReservation());
+        Navigation.PushAsync(new SeatReservation(selectedSchedule));
     }
 
+   
 }
