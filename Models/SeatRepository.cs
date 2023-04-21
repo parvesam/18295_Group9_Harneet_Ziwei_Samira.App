@@ -8,7 +8,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
 {
     public static class SeatRepository
     {
-        
+        /*created by Harneet*/
         private static List<string> _selectedSeats;
 
        

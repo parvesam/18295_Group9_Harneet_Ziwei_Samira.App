@@ -8,9 +8,9 @@ enum TicketType
 }
 public class Ticket
 {
-    
-    
-   
+    /*created by Harneet*/
+
+
     public string SeatNumber { get; set; }
 	public Schedule newSchedule { get; set; }
 

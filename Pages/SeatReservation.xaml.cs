@@ -1,11 +1,12 @@
 using _18295_Group9_Harneet_Ziwei_Samira.Models;
 using System;
 using Microsoft.Maui.Graphics;
+using System.Diagnostics.Tracing;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira.Pages;
 
-public partial class SeatReservation : ContentPage
-{
+public partial class SeatReservation : ContentPage 
+{ /*created by Harneet*/
     public double NoOfAdultTickets;
     public double NoOfKidTickets;
     private Schedule newSchedule;
@@ -71,14 +72,14 @@ public partial class SeatReservation : ContentPage
 
     {
         var GetSeats=SeatRepository.GetSelectedSeats();
-        if (GetSeats.Count == (NoOfAdultTickets + NoOfKidTickets))
+        if (!((NoOfKidTickets + NoOfAdultTickets) == (0)) && (GetSeats.Count == ((NoOfKidTickets + NoOfAdultTickets))))
         {
             TicketRepository.CreateTicket(newSchedule, GetSeats);
             Navigation.PushAsync(new PaymentPage());
         }
         else
         {
-             DisplayAlert("Wait !!", "Please choose the type of tickets", "OK");
+             DisplayAlert("Wait !!", "Please choose the type of tickets and select seat", "OK");
         }
     }
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace _18295_Group9_Harneet_Ziwei_Samira.Models
-{
+{/*created by Harneet*/
     public class Hall : Cinema
     {
         public int NumberOfSeats { get; set; }

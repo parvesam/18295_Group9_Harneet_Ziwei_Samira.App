@@ -4,8 +4,8 @@ using _18295_Group9_Harneet_Ziwei_Samira.Pages;
 namespace _18295_Group9_Harneet_Ziwei_Samira;
 
 public partial class BookTicket : ContentPage
-{
-	public BookTicket(Movie movie)
+{/*created by Harneet*/
+    public BookTicket(Movie movie)
 	{
 		InitializeComponent();
         LocationListView.ItemsSource = ScheduleRepository.SearchByName(movie.Name);
