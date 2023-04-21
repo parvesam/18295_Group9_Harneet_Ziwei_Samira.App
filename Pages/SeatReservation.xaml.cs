@@ -10,7 +10,7 @@ public partial class SeatReservation : ContentPage
     public double NoOfKidTickets;
     private Schedule newSchedule;
     
-    private string _chosenSeat { get; set; }
+    
 
     public SeatReservation(Schedule schedule)
     {
@@ -49,7 +49,7 @@ public partial class SeatReservation : ContentPage
       
         
        
-        _chosenSeat = SeatRepository.CombineNumbers(row, col);
+        var _chosenSeat = SeatRepository.CombineNumbers(row, col);
         var seatIsSelectedAlready = SeatRepository.isSeatAlreadySelected(_chosenSeat);
         if (seatIsSelectedAlready)
         {
@@ -69,14 +69,29 @@ public partial class SeatReservation : ContentPage
 
     private void ContinueToPaymentPage_Clicked(object sender, EventArgs e)
 
-    {var GetSeats=SeatRepository.GetSelectedSeats();
-        TicketRepository.CreateTicket(newSchedule, GetSeats);
-        Navigation.PushAsync(new PaymentPage());
+    {
+        var GetSeats=SeatRepository.GetSelectedSeats();
+        if (GetSeats.Count == (NoOfAdultTickets + NoOfKidTickets))
+        {
+            TicketRepository.CreateTicket(newSchedule, GetSeats);
+            Navigation.PushAsync(new PaymentPage());
+        }
+        else
+        {
+             DisplayAlert("Wait !!", "Please choose the type of tickets", "OK");
+        }
     }
 
     private void CheckPrice_Clicked(object sender, EventArgs e)
-    {
-        var price = SeatRepository.CalculatePrice(NoOfAdultTickets, NoOfKidTickets);
-       PriceLabel.Text = "Total Amount Due:"+price.ToString();
+    {if (!((NoOfKidTickets + NoOfAdultTickets) == (0)))
+        {
+            var price = SeatRepository.CalculatePrice(NoOfAdultTickets, NoOfKidTickets);
+            PriceLabel.Text = "Total Amount Due:" + price.ToString();
+        }
+        else
+        {
+            DisplayAlert("Wait !!", "Please choose the type of tickets", "OK");
+        }
+
     }
 }

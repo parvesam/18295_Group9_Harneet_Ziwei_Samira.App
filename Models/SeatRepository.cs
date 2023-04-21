@@ -63,7 +63,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
         }
         public static void AddSelectedSeat(string seatname)
         {
-            _selectedSeats = new List<string>();
+           
             if(!_selectedSeats.Contains(seatname))
             _selectedSeats.Add(seatname);
            
@@ -71,7 +71,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
         }
         public static void RemoveSelectedSeat(string seatname)
         {
-            _selectedSeats = new List<string>();
+            
             if (_selectedSeats.Contains(seatname))
                 _selectedSeats.Remove(seatname);
 
@@ -104,8 +104,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models
             _selectedSeats = new List<string>();
             //_selectedSeats.Add("1");
         }
-        public static List<string> ReturnSeats()
-        { return _selectedSeats; } 
+        
 
     }
 }

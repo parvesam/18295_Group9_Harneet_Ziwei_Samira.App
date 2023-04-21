@@ -15,7 +15,8 @@
                                 <Label Text="{Binding newSchedule.Movie.Name}" />
                                 <Label Text="{Binding newSchedule.Hall.HallName}" />
                                 <Label Text="{Binding newSchedule.Hall.Location}" />
-                            <ListView ItemsSource="{Binding SeatNumber}" />
+                            <Label Text="{Binding SeatNumber}" />
+
                         </StackLayout>
                         </ViewCell>
                     </DataTemplate>
