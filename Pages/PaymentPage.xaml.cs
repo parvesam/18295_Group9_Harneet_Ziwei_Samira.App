@@ -5,6 +5,7 @@ using System;
 public partial class PaymentPage : ContentPage
 {
     private bool emailOptionSelected;
+    private Ticket bookedTicket;
 
     public PaymentPage()
 	{
@@ -30,8 +31,7 @@ public partial class PaymentPage : ContentPage
             DisplayAlert("Error", "Please enter a valid email address.", "OK");
             return;
         }
-
-         Navigation.PushAsync(new TicketConfirmation());
+         Navigation.PushAsync(new TicketConfirmation(emailOptionSelected,bookedTicket));
     }
 
     bool IsValidEmail(string email)
