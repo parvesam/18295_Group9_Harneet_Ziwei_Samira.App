@@ -4,24 +4,47 @@
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Models.TicketConfirmation"
              Title="TicketConfirmation">
 
-        <StackLayout Padding="20">
-            <Label x:Name="EmailConfirmationLabel" />
-            <Label Text="Thank you! Your tickets have been booked. Please print your tickets." />
-            <ListView x:Name="TicketsListView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label Text="{Binding newSchedule.Movie.Name}" />
-                                <Label Text="{Binding newSchedule.Hall.HallName}" />
-                                <Label Text="{Binding newSchedule.Hall.Location}" />
-                            <Label Text="{Binding SeatNumber}" />
-
-                        </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentPage>
+    <StackLayout Padding="30"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start">
+        
+        <Label x:Name="EmailConfirmationLabel" 
+               FontSize="Medium"
+               FontAttributes="Bold"
+               Margin="0,0,0,10" />
+        <ListView x:Name="TicketsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0">
+                                <Label Text="{Binding newSchedule.Movie.Name}"
+                                       FontAttributes="Bold"
+                                       TextColor="DarkBlue" />
+                                <Label Text="{Binding SeatNumber}"
+                                       FontAttributes="Italic"
+                                       TextColor="DarkGray" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="{Binding newSchedule.Hall.HallName}"
+                                       FontAttributes="Bold"
+                                       TextColor="DarkBlue" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="2">
+                                <Label Text="{Binding newSchedule.Hall.Location}"
+                                       FontAttributes="Bold"
+                                       TextColor="DarkBlue" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
     
