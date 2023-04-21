@@ -3,18 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.BookTicket"
              Title="BookTicket"
-             BackgroundColor="#6B5FF4">
+             BackgroundColor="Black"
+             >
     <ScrollView>
-        <VerticalStackLayout
-               >
+        <VerticalStackLayout>
+        <HorizontalStackLayout>
 
             <Label  Text="Choose a Location"
                     FontSize="Large"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     Padding="20"
-                    TextColor="Black"
+                    TextColor="White"
                     />
-           
+            <Image x:Name="placeholder"
+                       Source="placeholder.png"
+                       HorizontalOptions="End"
+                       HeightRequest="30">
+
+            </Image>
+        </HorizontalStackLayout>
+        
+
+
             <ListView x:Name="LocationListView"
                       RowHeight="150"
                       ItemSelected="LocationListView_ItemSelected"
@@ -24,45 +34,53 @@
                     <DataTemplate>
 
                         <ViewCell>
-                            <HorizontalStackLayout
-                                VerticalOptions="Center"
-                                >
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="250"  />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
                                 <Image Source="{Binding Movie.ImageUrl}"
-                                       HeightRequest="150"
-                                       WidthRequest="150"
+                                       Aspect="AspectFill"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                                       Grid.RowSpan="3"
                                        
                                        />
                                 <Label Text="{Binding Movie.Name}"
-                                       VerticalOptions="Center"
-                                       FontSize="20"
-                                       TextColor="Black"
+                                       HorizontalOptions="Start"
+                                      
+                                       FontAttributes="Bold"
+                                       TextColor="white"
+                                       Grid.Column="1"
+                                       FontSize="Medium"
 
                                        />
-                                <Label Text="{Binding Hall.HallName}"
-                                       HeightRequest="150"
-                                       WidthRequest="150"
-                                       TextColor="Black"
-                                       
-                                       />
-                                <Label Text="{Binding Hall.Name}"
-                                       HeightRequest="150"
-                                       WidthRequest="150"
-                                       TextColor="Black"
-                                       
-                                       />
+                               
                                 <Label Text="{Binding Hall.Location}"
-                                       HeightRequest="150"
-                                       WidthRequest="150"
-                                       TextColor="Black"
+                                       HorizontalOptions="Start"
+                                      FontAttributes="Italic"
+                                       TextColor="White"
+                                       Grid.Row="1"
+                           Grid.Column="2"
+                                       FontSize="Medium"
                                        
                                        />
                                 <Label Text="{Binding DateTime}"
-                                       VerticalOptions="Center"
-                                       FontSize="20"
-                                       TextColor="Black"
+                                       HorizontalOptions="Start"
+                                      FontAttributes="Italic"
+                                       TextColor="white"
+                                       Grid.Row="2"
+                           Grid.Column="2"
+                                       FontSize="Small"
 
                                        />
-                            </HorizontalStackLayout>
+                            </Grid>
 
                         </ViewCell>
 

@@ -39,11 +39,12 @@ public partial class SeatReservation : ContentPage
     {
         var button = (ImageButton)sender;
         var col = ImagesGrid.GetColumn(button);
-        var SelecetdRowNumber = SeatRepository.ConvertToRowLabel(col);
+        var row = ImagesGrid.GetRow(button);
+        var SelecetdRowNumber = SeatRepository.ConvertToRowLabel(row);
         var SelecetdSeatNumberinRow = SeatRepository.ConvertToSeatNumberinRow(col);
 
 
-        var row = ImagesGrid.GetRow(button);
+      
         
        
         _chosenSeat = SeatRepository.CombineNumbers(row, col);
@@ -51,7 +52,7 @@ public partial class SeatReservation : ContentPage
         if (seatIsSelectedAlready)
         {
             SeatRepository.RemoveSelectedSeat(_chosenSeat);
-            button.BackgroundColor = Colors.Blue;
+            button.BackgroundColor = Colors.White;
         }
         else if (!seatIsSelectedAlready)
         {
