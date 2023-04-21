@@ -38,7 +38,7 @@
                    FontSize="Medium"
                    VerticalOptions="Center"
                    HorizontalOptions="Start"
-                   TextColor="Black" />
+                   TextColor="Black"/>
             </StackLayout>
 
             <StackLayout Grid.Row="0"
