@@ -4,7 +4,7 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models;
 public partial class TicketConfirmation : ContentPage
 {
     public List<Ticket> Tickets = new List<Ticket>();
-    public TicketConfirmation(bool emailOptionSelected, Ticket bookedTicket)
+    public TicketConfirmation(bool emailOptionSelected)
 	{
 		InitializeComponent();
         if (emailOptionSelected)
@@ -13,12 +13,9 @@ public partial class TicketConfirmation : ContentPage
         }
         else
         {
-            EmailConfirmationLabel.IsVisible = false;
+            EmailConfirmationLabel.IsVisible = true;
+            EmailConfirmationLabel.Text = "Thank you! Your tickets have been booked. Please print your tickets.";
         }
-
-
-        Tickets.Add(bookedTicket);
-
         TicketsListView.ItemsSource = TicketRepository.GetTickets();
     }
-}
+    }
