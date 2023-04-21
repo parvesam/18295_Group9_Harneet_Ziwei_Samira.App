@@ -11,7 +11,7 @@
                     WidthRequest="300"
                     Clicked="Confirmed_Clicked"
                     BackgroundColor="Pink"
-                    TextColor="Black" 
+                    TextColor="White" 
                 FontSize="30"/>
     </VerticalStackLayout>
 </ContentPage>
