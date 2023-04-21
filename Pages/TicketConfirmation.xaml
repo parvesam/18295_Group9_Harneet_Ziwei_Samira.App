@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Models.TicketConfirmation"
              Title="TicketConfirmation">
-   <StackLayout Padding="20">
+
+        <StackLayout Padding="20">
             <Label x:Name="EmailConfirmationLabel" />
             <Label Text="Thank you! Your tickets have been booked. Please print your tickets." />
             <ListView x:Name="TicketsListView">
@@ -22,4 +23,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-</ContentPage>
+    </ContentPage>
+    
