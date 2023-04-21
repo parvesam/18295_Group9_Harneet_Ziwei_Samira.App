@@ -3,13 +3,22 @@ namespace _18295_Group9_Harneet_Ziwei_Samira.Models;
 
 public partial class TicketConfirmation : ContentPage
 {
-	public TicketConfirmation(Ticket ticket, Hall hall)
+    public List<Ticket> Tickets = new List<Ticket>();
+    public TicketConfirmation(bool emailOptionSelected, Ticket bookedTicket)
 	{
 		InitializeComponent();
-		//MovieLabel.Text = ticket.MovieName;
-        //CinemaLabel.Text = ticket.Location;
-        //HallNameLabel.Text = hall.HallName;
-        //ScheduleLabel.Text = DateTime.Now.ToString();
-        // SeatsLabel.Text = 
-	}
+        if (emailOptionSelected)
+        {
+            EmailConfirmationLabel.Text = "Thank you! Your tickets have been booked. Please check your email.";
+        }
+        else
+        {
+            EmailConfirmationLabel.IsVisible = false;
+        }
+
+
+        Tickets.Add(bookedTicket);
+
+        TicketsListView.ItemsSource = Tickets;
+    }
 }
