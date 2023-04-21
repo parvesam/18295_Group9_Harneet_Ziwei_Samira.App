@@ -3,15 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_18295_Group9_Harneet_Ziwei_Samira.Pages.PaymentPage"
              Title="PaymentPage">
-    <VerticalStackLayout
-        VerticalOptions="End" 
-        HorizontalOptions="Center">
-        <Button x:Name="Confirmed"
-                    Text="Confirmed"
-                    WidthRequest="300"
-                    Clicked="Confirmed_Clicked"
-                    BackgroundColor="Pink"
-                    TextColor="White" 
-                FontSize="30"/>
-    </VerticalStackLayout>
+    <StackLayout Padding="20">
+        <Label Text="How would you like to pay?" />
+        <Picker x:Name="PaymentMethodPicker" SelectedIndex="0">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Debit</x:String>
+                    <x:String>Credit</x:String>
+                    <x:String>Mastercard</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Card Number:" Grid.Column="0" />
+            <Entry x:Name="CardNumberEntry" Grid.Column="1" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Name:" Grid.Column="0" />
+            <Entry x:Name="NameEntry" Grid.Column="1" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Email Address (Optional):" Grid.Column="0" />
+            <Entry x:Name="EmailEntry" Grid.Column="1" />
+        </Grid>
+        <Label Text="Would you like to receive tickets in email?" />
+        <Switch x:Name="ReceiveTicketsSwitch" />
+        <Button Text="Click to Confirm" Clicked="OnConfirmClicked" />
+    </StackLayout>
 </ContentPage>
