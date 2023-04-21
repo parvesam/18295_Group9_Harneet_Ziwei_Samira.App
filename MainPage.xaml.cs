@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
 
     private void SearchEntry_TextChanged(object sender, TextChangedEventArgs e)
     {
-
+        MoviesListView.ItemsSource = MoviesRepository.SearchByName(SearchEntry.Text);
     }
 
     private void MoviesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

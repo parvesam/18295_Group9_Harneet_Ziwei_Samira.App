@@ -31,7 +31,7 @@ public partial class PaymentPage : ContentPage
             return;
         }
 
-         Navigation.PushAsync(new TicketConfirmation(emailOptionSelected));
+         //Navigation.PushAsync(new TicketConfirmation(emailOptionSelected));
     }
 
     bool IsValidEmail(string email)

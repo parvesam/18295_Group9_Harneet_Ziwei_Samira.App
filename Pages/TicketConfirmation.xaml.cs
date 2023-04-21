@@ -6,10 +6,10 @@ public partial class TicketConfirmation : ContentPage
 	public TicketConfirmation(Ticket ticket, Hall hall)
 	{
 		InitializeComponent();
-		 MovieLabel.Text = ticket.MovieName;
-        CinemaLabel.Text = ticket.Location;
-        HallNameLabel.Text = hall.HallName;
-        ScheduleLabel.Text = DateTime.Now.ToString();
+		//MovieLabel.Text = ticket.MovieName;
+        //CinemaLabel.Text = ticket.Location;
+        //HallNameLabel.Text = hall.HallName;
+        //ScheduleLabel.Text = DateTime.Now.ToString();
         // SeatsLabel.Text = 
 	}
 }
